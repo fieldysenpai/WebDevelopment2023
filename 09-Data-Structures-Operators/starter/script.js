@@ -1,16 +1,16 @@
-'use strict';
+"use strict";
 
 // Data needed for a later exercise
 const flights =
-  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
+  "_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30";
 
 // Data needed for first part of the section
 const restaurant = {
-  name: 'Classico Italiano',
-  location: 'Via Angelo Tavanti 23, Firenze, Italy',
-  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
-  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
-  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  name: "Classico Italiano",
+  location: "Via Angelo Tavanti 23, Firenze, Italy",
+  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+  mainMenu: ["Pizza", "Pasta", "Risotto"],
   openingHours: {
     thu: {
       open: 12,
@@ -203,13 +203,13 @@ add(...anotherX);
 // short circuit in the case of || operator - If the first value is a truthy value it will
 // return that value.
 
-console.log('---OR---');
+console.log("---OR---");
 
-console.log(3 || 'Jonas');
-console.log('' || 'Jonas');
+console.log(3 || "Jonas");
+console.log("" || "Jonas");
 console.log(true || 0);
 console.log(undefined || null);
-console.log(undefined || 0 || 'Hello' || 23 || null);
+console.log(undefined || 0 || "Hello" || 23 || null);
 
 restaurant.numGuests = 23; // if there was no numGuests, it would assume numGuest = 10;
 const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
@@ -218,20 +218,21 @@ console.log(guests1);
 const guests2 = restaurant.numGuests || 10; // Better way then if/else or ternary
 console.log(guests2);
 
-console.log('---AND---');
+console.log("---AND---");
 // The AND (&&) operator short circuits when the first value is falsy. Then imediatly returns that value.
-console.log(0 && 'Jonas');
-console.log(7 && 'Jonas');
-console.log('Hello' && 23 && null && 'Jonas'); //Since null is a falsy value, it short circuits and returns it.
+console.log(0 && "Jonas");
+console.log(7 && "Jonas");
+console.log("Hello" && 23 && null && "Jonas"); //Since null is a falsy value, it short circuits and returns it.
 
 // Pratical Example
 
 if (restaurant.orderPizza) {
-  restaurant.orderPizza('mushrooms', 'spinach');
+  restaurant.orderPizza("mushrooms", "spinach");
 }
 
 // on this case the and operator does the same as the if statement
 
-restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+restaurant.orderPizza && restaurant.orderPizza("mushrooms", "spinach");
 
-console.log('mamamia');
+console.log("mamamia mucho");
+console.log("Muchas mamas");
