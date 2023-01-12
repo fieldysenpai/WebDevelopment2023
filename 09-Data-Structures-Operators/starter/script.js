@@ -196,7 +196,7 @@ const anotherX = [23, 5, 7];
 add(...anotherX);
 
 
- */
+ 
 
 //  *** SHORT CIRCUITING (&& AND ||)
 // logical operators can use ANY data type, return ANY data type and short circuiting.
@@ -211,7 +211,7 @@ console.log(true || 0);
 console.log(undefined || null);
 console.log(undefined || 0 || "Hello" || 23 || null);
 
-restaurant.numGuests = 23; // if there was no numGuests, it would assume numGuest = 10;
+restaurant.numGuests = 0; // if there was no numGuests, it would assume numGuest = 10;
 const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
 console.log(guests1);
 
@@ -234,4 +234,14 @@ if (restaurant.orderPizza) {
 
 restaurant.orderPizza && restaurant.orderPizza("mushrooms", "spinach");
 
-console.log("mamamia mucho");
+*/
+
+//  NULLISH COALESCING OPERATOR
+
+restaurant.numGuests = 0;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+//  Nullish values: are null and undefined (Not a 0 or a "")
+const correctGuests = restaurant.numGuests ?? 10; // It works with the concept of null values, not falsy nor truthy
+console.log(correctGuests); // Only if the first element is null or undefined, then the second one will be executed.
