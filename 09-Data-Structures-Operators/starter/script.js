@@ -245,3 +245,35 @@ console.log(guests1);
 //  Nullish values: are null and undefined (Not a 0 or a "")
 const correctGuests = restaurant.numGuests ?? 10; // It works with the concept of null values, not falsy nor truthy
 console.log(correctGuests); // Only if the first element is null or undefined, then the second one will be executed.
+
+//    OR ASSIGNMENT OPERATOR - Assigns a value to a variable, if the value is currently falsy
+
+const rest1 = {
+  name: "Capri",
+  numGuests: 0,
+};
+
+const rest2 = {
+  name: "La piazza",
+  owner: "Giovanni Rossi",
+};
+
+/* rest1.numGuests = rest1.numGuests || 10;
+rest2.numGuests = rest2.numGuests || 10;
+
+rest1.numGuests ||= 10;
+rest2.numGuests ||= 10; */
+
+//  Nullish Assignment Operator - Assings a value to a variable, if the value is currently null or undefined
+
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+
+console.log(rest1);
+console.log(rest2);
+
+//  AND assingment operator - Assigns a value to a variable if the first value is falsy
+
+rest2.owner &&= "<Anonymous>";
+
+console.log(rest2);
