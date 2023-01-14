@@ -272,7 +272,7 @@ rest2.numGuests ??= 10;
 console.log(rest1);
 console.log(rest2);
 
-//  AND assingment operator - Assigns a value to a variable if the first value is falsy
+//  AND assingment operator - Assigns a value to a variable if it is currently truthy
 
 rest2.owner &&= "<Anonymous>";
 
