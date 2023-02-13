@@ -42,15 +42,14 @@ const game = {
 
 //1. Create one player array for each team (variables 'players1' and 'players2')
 
-/* 2. The first player in any player array is the goalkeeper and the others are field 
-players. For Bayern Munich (team 1) create one variable ('gk') with the 
-goalkeeper's name, and one array ('fieldPlayers') with all the remaining 10 
-field players */
+const [players1, players2] = game.players;
 
 /* 2. The first player in any player array is the goalkeeper and the others are field 
 players. For Bayern Munich (team 1) create one variable ('gk') with the 
 goalkeeper's name, and one array ('fieldPlayers') with all the remaining 10 
 field players */
+
+const [gk, ...fieldPlayers] = players1;
 
 /* 3. Create an array 'allPlayers' containing all players of both teams (22 
   players) */
@@ -76,7 +75,7 @@ Then, call the function again with players from game.scored */
 
 // ** My old solution - Restart lets goo
 
-
+/*
 
 const [players1, players2,] = game.players;
 console.log(players1, players2);
